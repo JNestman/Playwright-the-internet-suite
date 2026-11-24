@@ -1,15 +1,33 @@
 {
-  "name": "playwright",
+  "name": "the-internet-playwright-suite",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "keywords": [],
+  "description": "End-to-end test automation suite for the-internet.herokuapp.com built with Playwright and TypeScript",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:chromium": "playwright test --project=chromium",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:cross-browser": "playwright test --project=firefox --project=webkit",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "e2e",
+    "test-automation",
+    "qa",
+    "page-object-model"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.1",
     "@playwright/test": "^1.63.0",
-    "@types/node": "^22.20.2"
-  }
+    "@types/node": "^22.20.2",
+    "typescript": "^7.0.2"
+  },
+  "private": true
 }
